@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "WWFE",
+  "name": "Weather",
   "version": "1.0",
-  "description": "Weather showing Female",
+  "description": "Weather showing Extension",
   "permissions": [
     "activeTab"
   ],
