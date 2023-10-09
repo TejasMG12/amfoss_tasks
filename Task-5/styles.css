@@ -44,8 +44,12 @@ h1 {
 button {
     background-color:rgb(2, 3, 47,10.0);
     border: 0px;
-    padding: 0;
-    margin-top: 10px;
+    width: 300px;
+    height: 80px;
+    margin-top: 30px;
+    background-image: url("assets/button.png");
+    background-size: cover;
+    border-radius: 15px;
 }
 button:hover{
     cursor: pointer;
@@ -98,7 +102,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     margin-top: 15px;
-    font-family: Arial, sans-serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
     font-weight: lighter;
     font-size: 20px;
@@ -110,12 +114,15 @@ button:hover{
     height: 48%;
     margin-left: 20px;
     margin-right: 20px;
-
+    text-align: left;
+    
 }
 
 .bottom {
     height: 8%;
-    background-color: #3345AB;
+    border:none ;
+    
+    
 }
 
 

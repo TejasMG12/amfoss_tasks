@@ -1,0 +1,271 @@
+@import url(https://fonts.googleapis.com/css?family=Ruluko);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+* {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 400px;
+    height: 500px;
+    margin: 0;
+    background: #2e41a1;
+    font-family: Ruluko;
+    line-height: 30px;
+    color: #FFFEE4;
+}
+
+.btns {
+    margin: 0;
+
+    font-size: 1.1em;
+    color: #FFFEE4;
+    letter-spacing: 1px;
+    height: 90%;
+    width: 100%;
+
+
+
+}
+
+[for] {
+    border-width: 1px;
+
+    float: left;
+    width: calc(100% / 3);
+    height: 64px;
+    color: #fefefe;
+    line-height: 3.5rem;
+    text-align: center;
+    background: #607779;
+    border-radius: 2px 2px 0 0;
+    transition: all .2s ease-in;
+}
+
+[for]~[for] {
+    border-left: 0;
+}
+
+.content {
+    overflow: hidden;
+    clear: both;
+    border-top: 0;
+    height: 90%;
+    
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(255, 255, 255, 0.5);
+
+
+}
+
+input {
+    float: left;
+    width: 80%;
+    height: 2rem;
+    margin-top: 2px;
+    border-radius: 4px 0 0 4px;
+    box-shadow: inset 0 0 4px hsla(0, 0%, 0%, .3);
+    border: 1px solid #fff;
+    border-right: 0;
+    transition: border .2s ease-out;
+    bottom: 0;
+
+    &:focus {
+        border-color: #fff;
+        outline: 0;
+        transition: border .3s ease-in;
+    }
+}
+
+button {
+    float: left;
+    border: 0;
+    width: 20%;
+    margin-top: 2px;
+    font-size: 1.25rem;
+    border-left: 0;
+    height: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #FFFEE4;
+    border: none;
+    transition: background .2s ease-out;
+    background: #F25036;
+    border-radius: 0 4px 4px 0;
+    box-shadow: inset 0 0 4px hsla(0, 0%, 0%, .3);
+    bottom: 0;
+}
+h2{
+    color: rgb(40, 40, 40);
+    font-size: 30px;
+    float: right;
+}
+img {
+
+    width: 60%;
+    object-fit: cover;
+}
+
+.sun {
+    width: 50px;
+}
+
+.picture {
+    height: 60%;
+    text-align: center;
+    background-color: rgba(208, 207, 244, 0.3);
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.left,
+.right {
+    color: rgb(30, 29, 29);
+    float: left;
+    background-color: rgba(255, 255, 255, 0.629);
+    height: 40%;
+    width: 50%;
+    font-weight: bold;
+    padding: 0 3px 0 3px;
+}
+
+.left {
+    text-align: left;
+    border-radius: 6px 0 0 6px;
+}
+
+.right {
+
+    text-align: right;
+    border-radius: 0 6px 6px 0;
+}
+
+#sunset,
+#sunrise {
+    font-size: 20px;
+    margin: 0;
+
+    margin-left: 2px;
+}
+
+
+#temp,
+#weather {
+    font-size: 30px;
+    margin: 0;
+
+    margin-right: 2px;
+    margin-top: 2px;
+
+}
+
+#temp {
+    margin-top: 4px;
+}
+
+#wIcon {
+    height: 40px;
+    width: 40px;
+    border: none;
+
+}
+
+ul {
+    list-style: none;
+    text-indent: .2em;
+
+    & li {
+        height: 4.5rem;
+        line-height: 4.5rem;
+        transition: all .3s ease;
+
+        &:hover {
+            color: #FFFEE4;
+            background: #91B7BA;
+            box-shadow: 2px 8px 8px -5px hsla(0, 0%, 0%, .2);
+            margin-left: -2.5rem;
+            text-indent: 2.8em;
+        }
+
+        & span {
+            color: #F25036;
+            padding-right: 2rem;
+        }
+
+        & span.cnt {
+            text-align: center;
+            margin-right: 2rem;
+            padding: 0 1rem 0;
+            font-weight: bold;
+            background: #F25036;
+            color: #FFFEE4;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+.btns [id*="nav"],
+.btns [id*="fav"],
+.btns [id*="mail"],
+.btns [id*="search"] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.btns [class*="nav"],
+.btns [class*="fav"],
+.btns [class*="mail"],
+.btns [class*="search"] {
+    transition: opacity 300ms;
+    opacity: 0;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    border-radius: 0 0 2px 2px/0 0 2px 2px;
+    transition: all .2s ease-in;
+}
+
+.btns [id*="nav"]:checked~.content [class*="nav"],
+.btns [id*="fav"]:checked~.content [class*="fav"],
+.btns [id*="mail"]:checked~.content [class*="mail"],
+.btns [id*="search"]:checked~.content [class*="search"] {
+    opacity: 1;
+    position: relative;
+    z-index: 10;
+
+    height: 100%;
+    min-height: 20rem;
+}
+
+.btns [id*="nav"]:checked~.tabs [for*="nav"],
+.btns [id*="fav"]:checked~.tabs [for*="fav"],
+.btns [id*="mail"]:checked~.tabs [for*="mail"],
+.btns [id*="search"]:checked~.tabs [for*="search"] {
+
+    background: #271a4fdb;
+    color: #FFFEE4;
+    font-weight: bold;
+}
+
+
+.searchbar {
+    padding-top: 20px;
+    height: 10%;
+    opacity: 1;
+    bottom: 0;
+}

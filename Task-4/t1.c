@@ -17,14 +17,14 @@ int main()
     for (int i = 0; i < n; i++)
     {
         flag = 0;
-        if ((inp[i][0][0] == inp[i][1][1] && inp[i][1][1] == inp[i][2][2]) || (inp[i][0][2] == inp[i][1][1] && inp[i][1][1] == inp[i][2][0]))
+        if (inp[i][1][1]!='.' &&((inp[i][0][0] == inp[i][1][1] && inp[i][1][1] == inp[i][2][2]) || (inp[i][0][2] == inp[i][1][1] && inp[i][1][1] == inp[i][2][0])))
         {
             printf("%c\n", inp[i][1][1]);
             continue;
         }
         for (int j = 0; j < 3; j++)
         {
-            if (inp[i][j][0] == inp[i][j][1] && inp[i][j][1] == inp[i][j][2])
+            if (inp[i][1][1]!='.' &&(inp[i][j][0] == inp[i][j][1] && inp[i][j][1] == inp[i][j][2]))
             {
                 printf("%c\n", inp[i][j][1]);
                 flag = 1;
@@ -35,7 +35,7 @@ int main()
             continue;
         for (int j = 0; j < 3; j++)
         {
-            if (inp[i][0][j] == inp[i][1][j] && inp[i][1][j] == inp[i][2][j])
+            if (inp[i][1][1]!='.' &&(inp[i][0][j] == inp[i][1][j] && inp[i][1][j] == inp[i][2][j]))
             {
                 printf("%c\n", inp[i][1][j]);
                 flag = 1;
@@ -46,5 +46,6 @@ int main()
             continue;
         printf("DRAW\n");
     }
+    printf("\b");
     return 0;
 }
