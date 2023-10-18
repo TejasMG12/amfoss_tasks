@@ -102,7 +102,7 @@ input {
     transition: border .2s ease-out;
     bottom: 0;
     font-size: 25px;
-
+	text-transform: uppercase;
     &:focus {
         border-color: #eb6565;
         outline: 0;
@@ -139,7 +139,7 @@ button {
 h2 {
     color: rgb(40, 40, 40);
     font-size: 30px;
-    float: right;
+    
 }
 
 img {
@@ -209,44 +209,12 @@ img {
 }
 
 #wIcon {
+    
     height: 40px;
     width: 40px;
     border: none;
+    border-radius: 10px;
 
-}
-
-ul {
-    list-style: none;
-    text-indent: .2em;
-
-    & li {
-        height: 4.5rem;
-        line-height: 4.5rem;
-        transition: all .3s ease;
-
-        &:hover {
-            color: #FFFEE4;
-            background: #91B7BA;
-            box-shadow: 2px 8px 8px -5px hsla(0, 0%, 0%, .2);
-            margin-left: -2.5rem;
-            text-indent: 2.8em;
-        }
-
-        & span {
-            color: #F25036;
-            padding-right: 2rem;
-        }
-
-        & span.cnt {
-            text-align: center;
-            margin-right: 2rem;
-            padding: 0 1rem 0;
-            font-weight: bold;
-            background: #F25036;
-            color: #FFFEE4;
-            border-radius: 10px;
-        }
-    }
 }
 
 

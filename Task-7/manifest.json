@@ -4,8 +4,18 @@
   "version": "1.0",
   "description": "Weather showing Extension",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "geolocation"
   ],
+  "commands": {
+    "open-extension": {
+      "suggested_key": {
+        "default": "Ctrl+L",
+        "mac": "Command+L"
+      },
+      "description": "Open My Extension"
+    }
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {

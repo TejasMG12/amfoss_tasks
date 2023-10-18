@@ -23,7 +23,7 @@ def live_update(status):
     for i in data:
 
         Dict = (json.loads(i.find('script').get_text()))
-        Arr = [i.get_text()for i in (i.find_all('span'))]
+        Arr = [j.get_text()for j in (i.find_all('span'))]
 
         if ( "result"== status and Arr[0].lower() not in ('result') ):
             continue
@@ -63,14 +63,13 @@ def up_coming():
     res = []
     for i in data:
         Dict = (json.loads(i.find('script').get_text()))
-        Arr = [i.get_text()for i in (i.find_all('span'))]
+        Arr = [j.get_text()for j in (i.find_all('span'))]
         if (Arr[0].lower() in ('live', 'abandoned', 'result', 'tea', 'lunch','innings break')):
             continue
         if Arr[0][:5] == "Today":
             Arr[0] = pytz.timezone('UTC').localize(datetime.strptime(Arr[0], 'Today, %I:%M %p')).astimezone(
                 pytz.timezone('Asia/Kolkata')).strftime('Today %I:%M %p')
-        print(Dict)
-        print(Arr)
+       
         x = f'''{Arr[3]}
 {Dict['name']}
 {Arr[0]}
@@ -161,7 +160,7 @@ def generate():
         for i in data:
 
             Dict = (json.loads(i.find('script').get_text()))
-            Arr = [i.get_text()for i in (i.find_all('span'))]
+            Arr = [j.get_text()for j in (i.find_all('span'))]
 
             if (Arr[0].lower() not in ('live', 'tea', 'lunch', 'stumps', 'stump', 'result')):
                 continue

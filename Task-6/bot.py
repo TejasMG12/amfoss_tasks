@@ -40,7 +40,7 @@ def run_bot():
         print(f'{username}: {user_message} on {channel}')
 
         
-        if user_message[0] == '!':
+        if len(user_message) and user_message[0] == '!':
             user_message = user_message[1:]
             if user_message.lower() in ('generate update','generate updates','generate'):
                 file_name = scrapper.generate()
@@ -51,7 +51,7 @@ def run_bot():
             
         if user_message[0] == '/':
             user_message = user_message[1:]
-            if user_message.lower() in ('generate update','generate updates','generate'):
+            if user_message.lower().strip() in ('generate update','generate updates','generate'):
                 file_name = scrapper.generate()
                 with open(file_name,'rb') as file:
                     await message.channel.send(file=discord.File(file, file_name))
