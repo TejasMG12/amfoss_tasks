@@ -123,17 +123,17 @@ class SearchWindow(QWidget):
             img = requests.get(img_url, timeout=5)
             if (img.status_code == 200):
 
-                with open("/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/downloaded_image.jpg", "wb") as f:
+                with open("/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/downloaded_image.jpg", "wb") as f:
                     f.write(img.content)
 
             image = Image.open(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/downloaded_image.jpg")
+                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/downloaded_image.jpg")
             resized_image = image.resize((180, 180))
 
             resized_image.save(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/output.png")
+                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/output.png")
             pixmap = QPixmap(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/output.png")
+                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/output.png")
             self.image_label.setPixmap(pixmap)
             self.flag = 1
         except Exception as e:
@@ -186,7 +186,7 @@ Stats :
         print(img_url)
         try:
             if (self.flag):
-                shutil.copy("/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/downloaded_image.jpg",
+                shutil.copy("/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/downloaded_image.jpg",
                             "/home/tejasmg/Desktop/amfoss_tasks/Task-8/Images/"+data["name"]+".jpg")
             else:
                 img = requests.get(img_url, timeout=5)
@@ -201,9 +201,9 @@ Stats :
             resized_image = image.resize((180, 180))
 
             resized_image.save(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/output.png")
+                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/output.png")
             pixmap = QPixmap(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/output.png")
+                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/output.png")
             self.image_label.setPixmap(pixmap)
 
             message_box = QMessageBox(self)

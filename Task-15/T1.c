@@ -10,29 +10,17 @@ int main()
         int n;
 
         scanf("%d", &n);
-        if (n < 4)
-        {
-            printf("0\n");
-            return 0;
-        }
-        if (n <= 5)
-        {
-            printf("3\n");
-            return 0;
-        }
-        n--;
-        int sum, x;
-        x = n / 3;
-        sum = (x * (6 + (x - 1) * 3)) / 2;
-        x = n / 5;
+        if (n > 0)
+            n = n - 1;
+        int j = n / 3;
+        int k = n / 5;
+        int m = n / 15;
+        int l = (j * (3 + j * 3)) / 2;
 
-        sum += (x * (10 + (x - 1) * 5)) / 2;
-        if (n >= 15)
-        {
-            x = n / 15;
-            sum -= (x * (30 + (x - 1) * 15)) / 2;
-        }
-        printf("%d\n", sum);
+        n = (k * (5 + k * 5)) / 2;
+        int o = (m * (15 + m * 15)) / 2;
+
+        printf("%d\n", l + n - o);
     }
     return 0;
 }

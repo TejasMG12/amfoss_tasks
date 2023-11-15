@@ -38,10 +38,10 @@ class DisplayWindow(QWidget):
             resized_image = image.resize((400, 500))
 
             resized_image.save(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/dis.png")
+                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/dis.png")
 
             pixmap = QPixmap(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/dis.png")
+                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/dis.png")
             self.image_label.setPixmap(pixmap)
             self.name_tag.setText(my_pm[self.ind][:-4].upper())
         self.pre.clicked.connect(self.prev_img)
@@ -81,10 +81,10 @@ class DisplayWindow(QWidget):
             resized_image = image.resize((400, 500))
 
             resized_image.save(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/dis.png")
+                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/dis.png")
 
             pixmap = QPixmap(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/dis.png")
+                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/dis.png")
             self.image_label.setPixmap(pixmap)
             self.name_tag.setText(my_pm[self.ind][:-4].upper())
 
@@ -97,12 +97,12 @@ class DisplayWindow(QWidget):
             self.ind = (self.ind - 1) % len(my_pm)
             image = Image.open(self.images+"/"+my_pm[self.ind])
             resized_image = image.resize((400, 500))
-            os.remove("/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/dis.png")
+            os.remove("/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/dis.png")
             resized_image.save(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/dis.png")
+                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/dis.png")
 
             pixmap = QPixmap(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/junk/dis.png")
+                "/home/tejasmg/Desktop/amfoss_tasks/Task-8/Temporary/dis.png")
             self.image_label.setPixmap(pixmap)
             self.name_tag.setText(my_pm[self.ind][:-4].upper())
 

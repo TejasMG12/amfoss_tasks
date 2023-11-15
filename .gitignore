@@ -1,2 +1,4 @@
 .vscode
 junk
+output
+__pycache__
