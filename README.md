@@ -6,6 +6,8 @@ I attempted to join the club before,but I was not able to complete most of the t
 
 # Tasks Status
 
+<div style="text-align:center">
+
 | Task  | Description | Status |
 | :-:       | :-:         | :-:    |
 | Task-00   | Installing Ubuntu | Completed |
@@ -24,5 +26,7 @@ I attempted to join the club before,but I was not able to complete most of the t
 | [Task-13](https://github.com/TejasMG12/amfoss_tasks/tree/main/Task-13)   | Vim | Completed |
 | [Task-14](https://github.com/TejasMG12/amfoss_tasks/tree/main/Task-14)   | Bandit | Completed |
 | [Task-15](https://github.com/TejasMG12/amfoss_tasks/tree/main/Task-15)   | Project Euler | Completed |
+
+</div>
 
 The tasks I had to do really made me think. I had to look at things in a new way that I never thought about before. Some were easier, and some were harder. Doing these tasks I learnt new concepts and techniques to approach problems. It was a cool experience that made me want to keep going.
