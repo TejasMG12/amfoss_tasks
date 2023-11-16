@@ -2,3 +2,5 @@
 junk
 output
 __pycache__
+.gitmodules
+.env

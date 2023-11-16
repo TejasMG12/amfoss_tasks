@@ -95,13 +95,7 @@ def run_bot():
     async def on_ready():
         print(f'{client.user} has connected to Discord!')
     
-    @bot.event
-    async def on_member_join(member):
-        print(member)
-        channel = member.guild.get_channel["722855218521309250"]
-        welcome_message = f'Welcome {member.mention} to the server!'
-        await channel.send(welcome_message)
-
+    
     @client.event
     async def on_message(message):
         if message.author == client.user:

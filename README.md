@@ -25,5 +25,4 @@ I attempted to join the club before,but I was not able to complete most of the t
 | [Task-14](https://github.com/TejasMG12/amfoss_tasks/tree/main/Task-14)   | Bandit | Completed |
 | [Task-15](https://github.com/TejasMG12/amfoss_tasks/tree/main/Task-15)   | Project Euler | Completed |
 
-Doing these tasks, I learnt alot of new concepts and techniques.<br>
-Overall it was fun and challenging doing these tasks.
+The tasks I had to do really made me think. I had to look at things in a new way that I never thought about before. Some were easier, and some were harder. Doing these tasks I learnt new concepts and techniques to approach problems. It was a cool experience that made me want to keep going.
