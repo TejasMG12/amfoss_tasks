@@ -55,9 +55,6 @@ function performSearch(city, lon, lat) {
                 sun[1].style.float = "right";
 
                 let s = current.getUTCHours();
-                console.log(s)
-
-
 
                 if (s < 5) {
                     cont.style.backgroundImage = "url(assets/night.jpg)";
@@ -101,7 +98,7 @@ function performSearch(city, lon, lat) {
                     wPic.src = "assets/cloudy.png";
                 }
                 else if (w == "Clouds") {
-                    wPic.src = "assets/full-moon.png";
+                    wPic.src = "assets/cloudy(1).png";
                 }
                 else if (w == "Thunderstorm") {
                     wPic.src = "assets/cloud-737_256.gif";

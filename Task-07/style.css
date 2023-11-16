@@ -1,6 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Ruluko);
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
 
 #NoConn {
@@ -109,7 +107,12 @@ input {
         transition: border .3s ease-in;
     }
 }
-
+label img {
+    margin-top: 8px;
+    max-height: 45px;
+    width: auto;
+}
+  
 button {
     float: left;
     border: 0;

@@ -19,7 +19,7 @@ I attempted to join the club before,but I was not able to complete most of the t
 | [Task-06](https://github.com/TejasMG12/amfoss_tasks/tree/main/Task-06)   | Cricket Vault | Completed |
 | [Task-07](https://github.com/TejasMG12/amfoss_tasks/tree/main/Task-07)   | AK-47℃ | Completed |
 | [Task-08](https://github.com/TejasMG12/amfoss_tasks/tree/main/Task-08)   | Poke-Search! | Completed |
-| Task-09   | GeoQuest | Completed |
+| Task-09   | GeoQuest | Not Attempted |
 | Task-10   | RuskOS | Not Attempted  |
 | Task-11   | TinkerCAD | Not Attempted |
 | Task-12 | Godot | Not attempted|
