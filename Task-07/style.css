@@ -172,7 +172,7 @@ img {
     float: left;
     background-color: rgba(255, 255, 255, 0.629);
     height: 40%;
-    width: 50%;
+    
     font-weight: bold;
     padding: 0 3px 0 3px;
 }
@@ -180,10 +180,11 @@ img {
 .left {
     text-align: left;
     border-radius: 6px 0 0 6px;
+    width: 70%;
 }
 
 .right {
-
+    width: 30%;
     text-align: right;
     border-radius: 0 6px 6px 0;
 }

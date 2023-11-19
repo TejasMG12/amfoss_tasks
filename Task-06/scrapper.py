@@ -231,7 +231,7 @@ def generate():
             write.writerow(" ")
         file.close()
         return "csvfiles/live.csv"
-generate()
+
 
 def get_response(message: str) -> str:
     req = message.strip().lower()

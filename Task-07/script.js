@@ -114,6 +114,8 @@ function performSearch(city, lon, lat) {
                 sun[0].style.display = "none";
                 sun[1].style.display = "none";
                 city_name.innerText = "";
+                city_time.innerText = "";
+
             }
 
 
