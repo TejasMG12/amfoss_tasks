@@ -1,8 +1,10 @@
+import os
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton
 from PySide6.QtGui import QPixmap,QMovie
-from PySide6.QtCore import  QRect
+from PySide6.QtCore import  QRect, QUrl
 from search_window import SearchWindow
+from PySide6.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -38,7 +40,8 @@ class MainWindow(QMainWindow):
 
         labelmov = QLabel(self)
         labelmov.setScaledContents(True)
-        movie = QMovie("/home/tejasmg/Desktop/amfoss_tasks/Task-08/assets/openingpokeball-pokemon.gif")
+        path = os.path.dirname(os.path.abspath(__file__))
+        movie = QMovie(path+ "/../assets/openingpokeball-pokemon.gif")
         labelmov.setGeometry(QRect(0, -100, 900,778))
         labelmov.setMovie(movie)
         movie.start() 

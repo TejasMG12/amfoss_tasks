@@ -1,4 +1,4 @@
-
+import os
 from PySide6.QtWidgets import QWidget, QLabel, QLineEdit, QPushButton, QApplication, QWidget, QHBoxLayout, QMessageBox, QDialog, QVBoxLayout
 from PySide6.QtGui import QPalette, QPixmap, QColor
 from PySide6.QtCore import Qt
@@ -6,13 +6,6 @@ import requests
 from PIL import Image
 from display_window import DisplayWindow
 import shutil
-# class popup(QWidget):
-#     def __init__(self):
-#         super().__init__()
-
-#         self.w = None
-#         self.setFixedSize(100, 100)
-
 
 class SearchWindow(QWidget):
     """
@@ -67,9 +60,9 @@ class SearchWindow(QWidget):
             """)
 
         palette = QPalette()
-
+        path = os.path.dirname(os.path.abspath(__file__))
         background_image = QPixmap(
-            '/home/tejasmg/Desktop/amfoss_tasks/Task-08/assets/landing.jpg')
+            path + '/../assets/landing.jpg')
         palette.setBrush(QPalette.Window, background_image)
 
         self.setPalette(palette)
@@ -107,14 +100,14 @@ class SearchWindow(QWidget):
             data = response.json()
         else:
             image = Image.open(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/assets/9fe.jpg")
+                "/home/tejasmg/amfoss_tasks/Task-08/assets/9fe.jpg")
             resized_image = image.resize((180, 180))
 
             resized_image.save(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/assets/9feop.jpg")
+                "/home/tejasmg/amfoss_tasks/Task-08/assets/9feop.jpg")
 
             pixmap = QPixmap(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/assets/9feop.jpg")
+                "/home/tejasmg/amfoss_tasks/Task-08/assets/9feop.jpg")
             self.image_label.setPixmap(pixmap)
             return
 
@@ -123,23 +116,23 @@ class SearchWindow(QWidget):
             img = requests.get(img_url, timeout=5)
             if (img.status_code == 200):
 
-                with open("/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/downloaded_image.jpg", "wb") as f:
+                with open("/home/tejasmg/amfoss_tasks/Task-08/Temporary/downloaded_image.jpg", "wb") as f:
                     f.write(img.content)
 
             image = Image.open(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/downloaded_image.jpg")
+                "/home/tejasmg/amfoss_tasks/Task-08/Temporary/downloaded_image.jpg")
             resized_image = image.resize((180, 180))
 
             resized_image.save(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/output.png")
+                "/home/tejasmg/amfoss_tasks/Task-08/Temporary/output.png")
             pixmap = QPixmap(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/output.png")
+                "/home/tejasmg/amfoss_tasks/Task-08/Temporary/output.png")
             self.image_label.setPixmap(pixmap)
             self.flag = 1
         except Exception as e:
             print(e)
             self.flag = 0
-            # pixmap = QPixmap("/home/tejasmg/Desktop/amfoss_tasks/Task-08/assets/EF2chSL.png")
+            # pixmap = QPixmap("/home/tejasmg/amfoss_tasks/Task-08/assets/EF2chSL.png")
 
             # self.image_label.setPixmap(pixmap)
 
@@ -171,14 +164,14 @@ Stats :
             data = response.json()
         else:
             image = Image.open(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/assets/9fe.jpg")
+                "/home/tejasmg/amfoss_tasks/Task-08/assets/9fe.jpg")
             resized_image = image.resize((180, 180))
 
             resized_image.save(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/assets/9feop.jpg")
+                "/home/tejasmg/amfoss_tasks/Task-08/assets/9feop.jpg")
 
             pixmap = QPixmap(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/assets/9feop.jpg")
+                "/home/tejasmg/amfoss_tasks/Task-08/assets/9feop.jpg")
             self.image_label.setPixmap(pixmap)
             return
 
@@ -186,24 +179,24 @@ Stats :
         print(img_url)
         try:
             if (self.flag):
-                shutil.copy("/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/downloaded_image.jpg",
-                            "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Images/"+data["name"]+".jpg")
+                shutil.copy("/home/tejasmg/amfoss_tasks/Task-08/Temporary/downloaded_image.jpg",
+                            "/home/tejasmg/amfoss_tasks/Task-08/Images/"+data["name"]+".jpg")
             else:
                 img = requests.get(img_url, timeout=5)
                 if (img.status_code == 200):
 
-                    with open("/home/tejasmg/Desktop/amfoss_tasks/Task-08/Images/"+data["name"]+".jpg", "wb") as f:
+                    with open("/home/tejasmg/amfoss_tasks/Task-08/Images/"+data["name"]+".jpg", "wb") as f:
                         f.write(img.content)
 
             image = Image.open(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Images/"+data["name"]+".jpg")
+                "/home/tejasmg/amfoss_tasks/Task-08/Images/"+data["name"]+".jpg")
 
             resized_image = image.resize((180, 180))
 
             resized_image.save(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/output.png")
+                "/home/tejasmg/amfoss_tasks/Task-08/Temporary/output.png")
             pixmap = QPixmap(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/output.png")
+                "/home/tejasmg/amfoss_tasks/Task-08/Temporary/output.png")
             self.image_label.setPixmap(pixmap)
 
             message_box = QMessageBox(self)
@@ -237,7 +230,7 @@ Stats :
 
         except Exception as e:
             print(e)
-            # pixmap = QPixmap("/home/tejasmg/Desktop/amfoss_tasks/Task-08/assets/EF2chSL.png")
+            # pixmap = QPixmap("/home/tejasmg/amfoss_tasks/Task-08/assets/EF2chSL.png")
 
             # self.image_label.setPixmap(pixmap)
 

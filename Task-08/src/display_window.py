@@ -29,7 +29,8 @@ class DisplayWindow(QWidget):
         self.name_tag = QLabel("Name", self)
         self.name_tag.setGeometry(90, 550, 280, 40)
         self.ind = 0
-        self.images = '/home/tejasmg/Desktop/amfoss_tasks/Task-08/Images'
+        self.path = os.path.dirname(os.path.abspath(__file__))
+        self.images = self.path + "/../Images"
         my_pm = os.listdir(self.images)
         if (len(my_pm) == 0):
             self.name_tag.setText("You have no pokemon")
@@ -38,10 +39,10 @@ class DisplayWindow(QWidget):
             resized_image = image.resize((400, 500))
 
             resized_image.save(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/dis.png")
+                self.path + "/../Temporary/dis.png")
 
             pixmap = QPixmap(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/dis.png")
+                self.path + "/../Temporary/dis.png")
             self.image_label.setPixmap(pixmap)
             self.name_tag.setText(my_pm[self.ind][:-4].upper())
         self.pre.clicked.connect(self.prev_img)
@@ -81,10 +82,10 @@ class DisplayWindow(QWidget):
             resized_image = image.resize((400, 500))
 
             resized_image.save(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/dis.png")
+                self.path + "/../Temporary/dis.png")
 
             pixmap = QPixmap(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/dis.png")
+                self.path + "/../Temporary/dis.png")
             self.image_label.setPixmap(pixmap)
             self.name_tag.setText(my_pm[self.ind][:-4].upper())
 
@@ -97,12 +98,12 @@ class DisplayWindow(QWidget):
             self.ind = (self.ind - 1) % len(my_pm)
             image = Image.open(self.images+"/"+my_pm[self.ind])
             resized_image = image.resize((400, 500))
-            os.remove("/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/dis.png")
+            os.remove(self.path + "/../Temporary/dis.png")
             resized_image.save(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/dis.png")
+                self.path + "/../Temporary/dis.png")
 
             pixmap = QPixmap(
-                "/home/tejasmg/Desktop/amfoss_tasks/Task-08/Temporary/dis.png")
+                self.path + "/../Temporary/dis.png")
             self.image_label.setPixmap(pixmap)
             self.name_tag.setText(my_pm[self.ind][:-4].upper())
 
